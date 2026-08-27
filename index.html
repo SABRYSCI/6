@@ -31,7 +31,7 @@
     </div>
 
     <script>
-        // معرف شيت جوجل الجديد للصف السادس
+        // تم وضع معرف شيت جوجل الخاص بالصف السادس هنا
         const sheetId = '1UWhi2gK44sXWlfp6ZNgk5VfSiagmXWAVzNdJc3NcNKg';
         const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
 
@@ -56,6 +56,7 @@
                         const activityBtn = document.createElement('a');
                         
                         if (status.trim() === 'إظهار') {
+                            // تصميم الزر المفتوح
                             activityBtn.href = fileLink;
                             activityBtn.target = "_blank";
                             activityBtn.className = "flex flex-col items-center justify-center bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200 font-bold py-4 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1";
@@ -64,6 +65,7 @@
                                 <span class="text-2xl">${pageNum}</span>
                             `;
                         } else {
+                            // تصميم الزر المغلق ورسالة التنبيه المخصصة
                             activityBtn.href = "#";
                             activityBtn.className = "flex flex-col items-center justify-center bg-slate-100 text-slate-400 border border-slate-200 font-bold py-4 rounded-xl cursor-pointer opacity-75 hover:bg-slate-200 transition-colors";
                             activityBtn.innerHTML = `
@@ -78,8 +80,8 @@
                                 Swal.fire({
                                     icon: 'info',
                                     title: 'النشاط مغلق مؤقتاً',
-                                    text: 'عزيزي الطالب، إجابة هذا النشاط غير متاحة الآن. سأقوم بفتحها لك فور انتهائنا من شرح الدرس المرتبط بها. دعنا نركز في الشرح لنتمكن من الحل معاً!',
-                                    confirmButtonText: 'حسناً، فهمت',
+                                    text: 'عزيزي الطالب، إجابة هذا النشاط غير متاحة الآن. إن شاء الله سأقوم بفتحها لك فور انتهائنا من شرح الدرس المرتبط بها.!',
+                                    confirmButtonText: 'حسناً، ',
                                     confirmButtonColor: '#3b82f6',
                                     backdrop: `rgba(0,0,123,0.4)`
                                 });
